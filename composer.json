@@ -1,0 +1,55 @@
+{
+  "name": "golchha21/resmushit",
+  "description": "A Laravel package for the popular image optimization web service reSmush.it",
+  "keywords": [
+    "golchha21",
+    "image-optimization",
+    "image-compression",
+    "resmushit",
+    "laravel",
+    "package",
+    "php"
+  ],
+  "homepage": "https://github.com/golchha21/resmushit",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Ulhas Vardhan Golchha",
+      "email": "vardhans@ulhas.neet",
+      "homepage": "http://www.ulhas.net",
+      "role": "Web Architect"
+    }
+  ],
+  "support": {
+    "email": "vardhans@ulhas.net",
+    "issues": "https://github.com/golchha21/resmushit/issues"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.1",
+    "illuminate/support": "^6.0",
+    "ext-json": "*",
+    "ext-fileinfo": "*",
+    "ext-curl": "*"
+  },
+  "require-dev": {
+    "laravel/framework": "^5.8|^6.0|^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Golchha21\\ReSmushIt\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Golchha21\\ReSmushIt\\ReSmushItServiceProvider"
+      ]
+    }
+  }
+}
