@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\File;
 
 class ReSmushIt
 {
-    const VERSION = '1.0.2';
-    const ENDPOINT = 'http://api.resmush.it/';
-    const TIMEOUT = 10;
-    const MAX_FILE_SIZE = 5242880;
+    private const VERSION = '1.0.4';
+    private const ENDPOINT = 'http://api.resmush.it/';
+    private const TIMEOUT = 10;
+    private const MAX_FILE_SIZE = 5242880;
 
     /** @var file */
     protected $file;
@@ -195,5 +195,4 @@ class ReSmushIt
             'error_long' => 'No url of images provided.',
         ]);
     }
-
 }

@@ -2,6 +2,13 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.0.4 - 2020-04-17
+
+- Made the const Private 
+- Updated CHANGELOG
+- Updated README
+- Version bump composer.json
+
 ## 1.0.3 - 2020-04-17
 
 - Updated CHANGELOG
