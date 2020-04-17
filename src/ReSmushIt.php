@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\File;
 
 class ReSmushIt
 {
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.2';
     const ENDPOINT = 'http://api.resmush.it/';
     const TIMEOUT = 10;
     const MAX_FILE_SIZE = 5242880;
