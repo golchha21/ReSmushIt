@@ -29,7 +29,6 @@
   "prefer-stable": true,
   "require": {
     "php": "^7.1",
-    "illuminate/support": "^6.0",
     "ext-json": "*",
     "ext-fileinfo": "*",
     "ext-curl": "*"
