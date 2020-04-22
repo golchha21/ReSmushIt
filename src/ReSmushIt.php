@@ -8,24 +8,25 @@ use Illuminate\Support\Facades\File;
 
 class ReSmushIt
 {
-    private const VERSION = '1.0.4';
+    private const VERSION = '1.1.0';
     private const ENDPOINT = 'http://api.resmush.it/';
     private const TIMEOUT = 10;
     private const MAX_FILE_SIZE = 5242880;
 
     /** @var file */
-    protected $file;
+    private $file;
 
     /**
      * starts the optimization process through the validations
      * @param $path string
-     * @return boolean array
+     * @return boolean|array
      */
     public function path($path)
     {
         $this->file = $path;
         $validation = $this->validate();
         if ($validation === true) {
+            $this->saveOriginalPicture();
             return $this->process();
         }
         return $validation;
@@ -33,7 +34,7 @@ class ReSmushIt
 
     /**
      * validates the file before processing
-     * @param  string
+     * @param string
      * @return boolean|array
      */
     protected function validate()
@@ -62,11 +63,12 @@ class ReSmushIt
 
     /**
      * sets the list of supported mime types by the API
+     * @returns array
      */
     protected function getMime()
     {
-        if (Config::has('resmushit.mime')) {
-            return Config::get('resmushit.mime');
+        if (Config::has('ReSmushIt.mime')) {
+            return Config::get('ReSmushIt.mime');
         }
         return [
             'image/png',
@@ -77,6 +79,22 @@ class ReSmushIt
         ];
     }
 
+    /**
+     * checks whether to save the original picture and then saves it.
+     * @returns void
+     */
+    protected function saveOriginalPicture()
+    {
+        if (Config::get('ReSmushIt.original')) {
+            $original = File::dirname($this->file) . DIRECTORY_SEPARATOR . File::name($this->file) . '_original.' . File::extension($this->file);
+            File::copy($this->file, $original);
+        }
+    }
+
+    /**
+     * Process the optimization
+     * @returns bool|array
+     */
     protected function process()
     {
         $result = json_decode($this->postCurl(), true);
@@ -93,7 +111,7 @@ class ReSmushIt
 
     /**
      * send the image for optimization
-     * @return CURLFile
+     * @return bool|array
      */
     protected function postCurl()
     {
@@ -120,22 +138,24 @@ class ReSmushIt
 
     /**
      * sets the quality of the optimized picture.
+     * @returns int
      */
     protected function getPictureQuality()
     {
-        if (Config::has('resmushit.quality')) {
-            return Config::get('resmushit.quality');
+        if (Config::has('ReSmushIt.quality')) {
+            return Config::get('ReSmushIt.quality');
         }
         return 92;
     }
 
     /**
      * sets whether to preserve exif for picture.
+     * @returns bool
      */
     protected function getExif()
     {
-        if (Config::has('resmushit.exif')) {
-            return Config::get('resmushit.exif');
+        if (Config::has('ReSmushIt.exif')) {
+            return Config::get('ReSmushIt.exif');
         }
         return false;
     }
@@ -146,15 +166,15 @@ class ReSmushIt
      */
     protected function getUserAgent()
     {
-        if (Config::has('resmushit.useragent')) {
-            return Config::get('resmushit.useragent');
+        if (Config::has('ReSmushIt.useragent')) {
+            return Config::get('ReSmushIt.useragent');
         }
-        return "reSmushit".self::VERSION.' - '.env('app.url');
+        return "reSmushit" . self::VERSION . ' - ' . env('app.url');
     }
 
     /**
      * downloads and saves the optimized picture
-     * @param  string
+     * @param string
      */
     protected function getCurl($destination)
     {
@@ -174,15 +194,17 @@ class ReSmushIt
     /**
      * starts the optimization process through the validations
      * @param $paths array
-     * @return boolean array
+     * @return boolean|array
      */
     public function paths($paths)
     {
+        $result = [];
         if (is_array($paths)) {
             foreach ($paths as $path) {
                 $this->file = $path;
                 $validation = $this->validate();
                 if ($validation === true) {
+                    $this->saveOriginalPicture();
                     $result[File::basename($this->file)] = $this->process();
                 } else {
                     $result[File::basename($this->file)] = $validation;
@@ -195,4 +217,5 @@ class ReSmushIt
             'error_long' => 'No url of images provided.',
         ]);
     }
+
 }

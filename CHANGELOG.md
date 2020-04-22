@@ -2,6 +2,15 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.1.0 - 2020-04-18
+
+- Ability to save the original images
+- configuration value load error now rectified
+- Reformatted the code
+- Updated the class documentation
+- Updated CHANGELOG
+- Version bump composer.json
+
 ## 1.0.4 - 2020-04-17
 
 - Made the const Private 

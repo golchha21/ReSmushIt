@@ -2,7 +2,8 @@ reSmushit for Laravel
 ==========
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/golchha21/resmushit.svg?style=flat-square)](https://packagist.org/packages/golchha21/resmushit)
-[![Total Downloads](https://img.shields.io/packagist/dt/golchha21/resmushit.svg?style=flat-square)](https://packagist.org/packages/golchha21/resmushit)
+[![Total Downloads](https://poser.pugx.org/golchha21/resmushit/downloads)](https://packagist.org/packages/golchha21/resmushit)
+[![License](https://poser.pugx.org/golchha21/resmushit/license)](https://packagist.org/packages/golchha21/resmushit)
 
 A Laravel package for the popular image optimization web service [reSmush.it](http://resmush.it/)
 
@@ -21,12 +22,14 @@ php artisan vendor:publish --provider Golchha21\ReSmushIt\ReSmushItServiceProvid
 ```
 
 ## Example configuration file
+
 ```php
 // config/ReSmushIt.php
-<?php
 
 return [
-	
+
+    'original' => true|false,
+    
     'quality' => 92,
 
     'mime' => [
@@ -75,4 +78,4 @@ See also the list of [contributors](https://github.com/golchha21/reSmushit/graph
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+reSmushit for Laravel is open-sourced software licensed under the [MIT license](LICENSE.md).

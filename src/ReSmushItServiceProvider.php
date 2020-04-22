@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class ReSmushItServiceProvider extends ServiceProvider
 {
-    const CONFIG_PATH = __DIR__.'/config/ReSmushIt.php';
+    const CONFIG_PATH = __DIR__ . '/config/ReSmushIt.php';
 
     /**
      * Bootstrap the application services.

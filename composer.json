@@ -1,55 +1,58 @@
 {
-  "name": "golchha21/resmushit",
-  "version": "1.0.4",
-  "description": "A Laravel package for the popular image optimization web service reSmush.it",
-  "keywords": [
-    "golchha21",
-    "image-optimization",
-    "image-compression",
-    "resmushit",
-    "laravel",
-    "package",
-    "php"
-  ],
-  "homepage": "https://github.com/golchha21/resmushit",
-  "license": "MIT",
-  "type": "library",
-  "authors": [
-    {
-      "name": "Ulhas Vardhan Golchha",
-      "email": "vardhans@ulhas.neet",
-      "homepage": "http://www.ulhas.net",
-      "role": "Web Architect"
+    "name": "golchha21/resmushit",
+    "version": "1.1.0",
+    "description": "A Laravel package for the popular image optimization web service reSmush.it",
+    "keywords": [
+        "golchha21",
+        "laravel",
+        "laravel-package",
+        "resmushit",
+        "image-optimization",
+        "image-optimisation",
+        "image-optimizer",
+        "image-compression",
+        "image-compressor",
+        "php"
+    ],
+    "homepage": "https://github.com/golchha21/resmushit",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ulhas Vardhan Golchha",
+            "email": "vardhans@ulhas.neet",
+            "homepage": "http://www.ulhas.net",
+            "role": "Web Architect"
+        }
+    ],
+    "support": {
+        "email": "vardhans@ulhas.net",
+        "issues": "https://github.com/golchha21/resmushit/issues"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "ext-fileinfo": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "laravel/framework": "^5.8|^6.0|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Golchha21\\ReSmushIt\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Golchha21\\ReSmushIt\\ReSmushItServiceProvider"
+            ]
+        }
     }
-  ],
-  "support": {
-    "email": "vardhans@ulhas.net",
-    "issues": "https://github.com/golchha21/resmushit/issues"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "require": {
-    "php": "^7.1",
-    "ext-json": "*",
-    "ext-fileinfo": "*",
-    "ext-curl": "*"
-  },
-  "require-dev": {
-    "laravel/framework": "^5.8|^6.0|^7.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Golchha21\\ReSmushIt\\": "src"
-    }
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Golchha21\\ReSmushIt\\ReSmushItServiceProvider"
-      ]
-    }
-  }
 }
