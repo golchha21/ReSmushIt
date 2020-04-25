@@ -48,7 +48,7 @@ return [
 
 ## Usage
 
-#####Option 1
+###### Option 1
 ``` php
     $file = public_path('images/news1.jpg');
     $files = [
@@ -63,7 +63,7 @@ return [
     $results = $resmushit->paths($files);
 ```
 
-#####Option 2
+###### Option 2
 ``` php
     $file = public_path('images/news1.jpg');
     $files = [
