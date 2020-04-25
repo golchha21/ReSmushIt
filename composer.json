@@ -1,12 +1,11 @@
 {
     "name": "golchha21/resmushit",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "A Laravel package for the popular image optimization web service reSmush.it",
     "keywords": [
         "golchha21",
         "laravel",
         "laravel-package",
-        s
         "resmushit",
         "image-optimization",
         "image-optimisation",

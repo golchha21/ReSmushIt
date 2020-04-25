@@ -2,6 +2,11 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.2.2 - 2020-04-25
+
+- Invalid character in composer removed
+- Version bump
+
 ## 1.2.1 - 2020-04-25
 
 - Version bump
