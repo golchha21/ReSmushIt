@@ -2,6 +2,10 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.2.1 - 2020-04-25
+
+- Version bump
+
 ## 1.2.0 - 2020-04-25
 
 - Moved & Renamed the Service Provider
