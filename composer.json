@@ -20,7 +20,7 @@
     "authors": [
         {
             "name": "Ulhas Vardhan Golchha",
-            "email": "vardhans@ulhas.neet",
+            "email": "vardhans@ulhas.net",
             "homepage": "http://www.ulhas.net",
             "role": "Web Architect"
         }
@@ -51,8 +51,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Golchha21\\ReSmushIt\\ReSmushItServiceProvider"
+                "Golchha21\\ReSmushIt\\Providers\\ServiceProvider"
             ]
+        },
+        "aliases": {
+            "Optimize": "Golchha21\\ReSmushIt\\Facades\\Optimize"
         }
     }
 }
