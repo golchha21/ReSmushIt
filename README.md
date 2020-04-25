@@ -18,7 +18,7 @@ composer require golchha21/resmushit
 ### Publish configuration file
 
 ```bash
-php artisan vendor:publish --provider Golchha21\ReSmushIt\ReSmushItServiceProvider --tag=config
+php artisan vendor:publish --provider Golchha21\ReSmushIt\Providers\ServiceProvider --tag=config
 ```
 
 ## Example configuration file
@@ -48,6 +48,7 @@ return [
 
 ## Usage
 
+#####Option 1
 ``` php
     $file = public_path('images/news1.jpg');
     $files = [
@@ -60,6 +61,20 @@ return [
     $resmushit = new ReSmushIt();
     $result = $resmushit->path($file);
     $results = $resmushit->paths($files);
+```
+
+#####Option 2
+``` php
+    $file = public_path('images/news1.jpg');
+    $files = [
+        public_path('images/news1.jpg'),
+        public_path('images/news2.jpg'),
+        public_path('images/news3.jpg'),
+        public_path('images/news4.jpg'),
+    ];
+
+    Optimize::path($file);
+    Optimize::paths($files);
 ```
 
 ## Changelog
