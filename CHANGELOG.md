@@ -2,6 +2,14 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.2.0 - 2020-04-25
+
+- Moved & Renamed the Service Provider
+- Now supports Facades
+- Updated README
+- Updated CHANGELOG
+- Version bump composer.json
+
 ## 1.1.0 - 2020-04-18
 
 - Ability to save the original images
