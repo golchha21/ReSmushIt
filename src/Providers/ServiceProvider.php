@@ -1,12 +1,13 @@
 <?php
 
-namespace Golchha21\ReSmushIt;
+namespace Golchha21\ReSmushIt\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Golchha21\ReSmushIt\ReSmushIt;
+use Illuminate\Support\ServiceProvider as SP;
 
-class ReSmushItServiceProvider extends ServiceProvider
+class ServiceProvider extends SP
 {
-    const CONFIG_PATH = __DIR__ . '/config/ReSmushIt.php';
+    const CONFIG_PATH = __DIR__ . '/../config/ReSmushIt.php';
 
     /**
      * Bootstrap the application services.
@@ -29,5 +30,8 @@ class ReSmushItServiceProvider extends ServiceProvider
         // Automatically apply the package configuration
         $this->mergeConfigFrom(self::CONFIG_PATH, 'resmushit');
 
+        $this->app->bind('optimize', function ($app) {
+            return new ReSmushIt();
+        });
     }
 }
