@@ -2,6 +2,11 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.2.4 - 2022-09-01
+
+- Changes author website from http to https
+- Version bump
+
 ## 1.2.3 - 2021-02-06
 
 - Now supports Laravel 8
