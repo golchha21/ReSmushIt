@@ -2,11 +2,16 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
-## 1.2.5 - 2022-09-01
+## 1.2.6 - 2022-01-09
+
+- Version bump
+- Updated Readme.md & Changelog.md
+
+## 1.2.5 - 2022-01-09
 
 - Version bump
 
-## 1.2.4 - 2022-09-01
+## 1.2.4 - 2022-01-09
 
 - Changed author website from http to https
 

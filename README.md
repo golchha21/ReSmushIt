@@ -1,9 +1,9 @@
 reSmushit for Laravel
 ==========
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/golchha21/resmushit.svg?style=flat-square)](https://packagist.org/packages/golchha21/resmushit)
-[![Total Downloads](https://poser.pugx.org/golchha21/resmushit/downloads)](https://packagist.org/packages/golchha21/resmushit)
-[![License](https://poser.pugx.org/golchha21/resmushit/license)](https://packagist.org/packages/golchha21/resmushit)
+[![Latest Stable Version](http://poser.pugx.org/golchha21/resmushit/v)](https://packagist.org/packages/golchha21/resmushit)
+[![Total Downloads](http://poser.pugx.org/golchha21/resmushit/downloads)](https://packagist.org/packages/golchha21/resmushit)
+[![License](http://poser.pugx.org/golchha21/resmushit/license)](https://packagist.org/packages/golchha21/resmushit)
 
 A Laravel package for the popular image optimization web service [reSmush.it](http://resmush.it/)
 
