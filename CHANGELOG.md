@@ -2,6 +2,12 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.2.7 - 2022-01-14
+
+- Updated const version
+- Updated Changelog.md
+- Version bump
+
 ## 1.2.6 - 2022-01-09
 
 - Version bump
