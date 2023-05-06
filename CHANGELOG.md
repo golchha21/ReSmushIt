@@ -2,6 +2,11 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.2.9 - 2023-05-06
+
+- Added Laravel 10 support
+- Version bump
+
 ## 1.2.8 - 2022-05-08
 
 - Moved Laravel/framework from require-dev to require

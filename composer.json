@@ -1,6 +1,6 @@
 {
     "name": "golchha21/resmushit",
-    "version": "1.2.8",
+    "version": "1.2.9",
     "description": "A Laravel package for the popular image optimization web service reSmush.it",
     "keywords": [
         "golchha21",
@@ -32,11 +32,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.1|^7.2.5|^7.3|^8.0",
+        "php": "^7.1|^7.2.5|^7.3|^8.0|^8.1",
         "ext-json": "*",
         "ext-fileinfo": "*",
         "ext-curl": "*",
-        "laravel/framework": "^5.8|^6.0|^7.0|^8.0|^9.0"
+        "laravel/framework": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0"
     },
     "autoload": {
         "psr-4": {
