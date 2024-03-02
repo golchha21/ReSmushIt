@@ -2,6 +2,11 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.3.0 - 2024-03-02
+
+- Merged a [pull request](https://github.com/golchha21/ReSmushIt/pull/1) from [@atastycookie](https://github.com/atastycookie) which improves security to avoid MITM attacks 
+- Version bump
+
 ## 1.2.9 - 2023-05-06
 
 - Added Laravel 10 support
