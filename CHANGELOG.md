@@ -2,6 +2,11 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.3.2 - 2025-04-13
+
+- Added Laravel 12 support
+- Version bump
+
 ## 1.3.1 - 2024-06-29
 
 - Added Laravel 11 support
