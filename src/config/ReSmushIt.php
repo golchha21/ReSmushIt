@@ -19,8 +19,9 @@ return [
         'image/tiff',
     ],
 
-//    'useragent' => '',
+    'useragent' => 'ReSmushIt v1.3.4',
 
     'exif' => false,
 
+    'max_filesize' => 5242880, // 5 MB in bytes
 ];

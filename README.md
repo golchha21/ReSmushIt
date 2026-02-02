@@ -1,8 +1,8 @@
 # reSmushit for Laravel
 
-[![Latest Stable Version](http://poser.pugx.org/golchha21/resmushit/v)](https://packagist.org/packages/golchha21/resmushit)
-[![Total Downloads](http://poser.pugx.org/golchha21/resmushit/downloads)](https://packagist.org/packages/golchha21/resmushit)
-[![License](http://poser.pugx.org/golchha21/resmushit/license)](https://packagist.org/packages/golchha21/resmushit)
+[![Version](https://img.shields.io/packagist/v/golchha21/resmushit)](https://packagist.org/packages/golchha21/resmushit)
+[![Downloads](https://img.shields.io/packagist/dt/golchha21/resmushit)](https://packagist.org/packages/golchha21/resmushit)
+[![License](https://img.shields.io/packagist/l/golchha21/resmushit)](https://packagist.org/packages/golchha21/resmushit)
 
 A Laravel package for the popular image optimization web service [reSmush.it](http://resmush.it/)
 
@@ -43,10 +43,13 @@ return [
     ],
 
     // Custom User-Agent for API requests
-    'useragent' => 'SOME USER AGENT',
+    'useragent' => 'ReSmushIt v1.3.4',
 
     // Preserve EXIF metadata
     'exif' => false,
+    
+    // Maximum allowed file size in bytes (e.g. 5 MB)
+    'max_filesize' => 5242880,
 ];
 ```
 
@@ -102,7 +105,7 @@ if (isset($result['error'])) {
 Both `path()` and `paths()` always return arrays.
 
 -   On success, the response contains optimization details returned by the reSmush.it API.
--   On failure, the response contains an `error` key describing the issue.
+-   On failure, the response contains an `error` key describing the issue, along with additional context when available.
 
 This applies to both single and batch optimization.
 
@@ -112,6 +115,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Security
 
+For common issues and environment-specific fixes, see [Troubleshoot](TROUBLESHOOT.md).
 If you discover any security-related issues, please email vardhans@ulhas.net instead of using the issue tracker.
 
 ## Author

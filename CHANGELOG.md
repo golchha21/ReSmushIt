@@ -2,6 +2,26 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.3.4 - 2026-02-03
+
+### Fixed
+- Prevented fatal errors when the reSmush.it API is unreachable or returns invalid responses
+- Restored file size validation to reject oversized images before upload
+- Gracefully handle cURL, SSL, and JSON decoding failures
+
+### Improved
+- Image optimization now always returns a structured array instead of triggering runtime errors
+- Batch optimization (`paths()`) no longer fails entirely if a single file cannot be optimized
+- Internal request flow refactored to improve reliability and testability
+
+### Tests
+- Added unit test to validate file size rejection behavior
+- Strengthened test coverage around error handling paths
+
+### Documentation
+- Updated README with explicit error handling and return value guarantees
+- Added a dedicated Troubleshooting guide for SSL certificate issues
+
 ## 1.3.3 - 2026-02-03
 
 ### Fixed

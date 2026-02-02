@@ -42,6 +42,17 @@ class ReSmushIt
      */
     protected function optimizeFile(string $file): array
     {
+        $maxFilesize = config('ReSmushIt.max_filesize');
+
+        if ($maxFilesize !== null && filesize($file) > $maxFilesize) {
+            return [
+                'error' => 'File size exceeds the allowed limit',
+                'file'  => $file,
+                'size'  => filesize($file),
+                'limit' => $maxFilesize,
+            ];
+        }
+
         $payload = [
             'files' => new \CURLFile($file),
         ];
