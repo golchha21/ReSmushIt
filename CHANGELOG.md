@@ -2,6 +2,21 @@
 
 All notable changes to `golchha21/resmushit` will be documented in this file
 
+## 1.3.3 - 2026-02-03
+
+### Fixed
+- Prevented fatal errors when the reSmush.it API is unreachable or returns invalid responses
+- Gracefully handle cURL and JSON decoding failures
+
+### Improved
+- Image optimization now always returns a structured array instead of triggering runtime errors
+- Batch optimization (`paths()`) no longer fails entirely if a single file cannot be optimized
+- Internal HTTP call extracted to improve testability and reliability
+
+### Internal
+- Refactored optimization flow to make the package fully testable with PHPUnit
+- Added comprehensive unit and feature test coverage
+
 ## 1.3.2 - 2025-04-13
 
 - Added Laravel 12 support

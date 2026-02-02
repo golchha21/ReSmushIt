@@ -1,0 +1,7 @@
+{
+    "src": "image.jpg",
+    "dest": "optimized.jpg",
+    "percent": 45,
+    "size_before": 100000,
+    "size_after": 55000
+}

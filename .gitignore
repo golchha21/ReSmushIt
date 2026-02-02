@@ -1,6 +1,29 @@
-build
-composer.lock
-docs
-vendor
-coverage
-.idea
+# Composer
+/vendor/
+/composer.lock
+
+# PHP
+*.log
+*.cache
+*.txt
+.phpunit.result.cache
+
+# PHPUnit
+/.phpunit.cache/
+/phpunit.xml
+
+# IDEs
+/.idea/
+/.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# Coverage reports
+/coverage/
